@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        select {
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        #result {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CGPA Calculator</h1>
+    <h2>First Semester</h2>
+    <form id="first-semester-form">
+        <table>
+            <tr>
+                <th>Subject</th>
+                <th>Credits</th>
+                <th>Grade</th>
+            </tr>
+            <!-- First Semester Subjects -->
+            <tr>
+                <td>Engineering Physics</td>
+                <td>3</td>
+                <td>
+                    <select class="grade-select">
+                        <option value="O">O</option>
+                        <option value="A+">A+</option>
+                        <option value="A">A</option>
+                        <option value="B+">B+</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Engineering Chemistry</td>
+                <td>3</td>
+                <td>
+                    <select class="grade-select">
+                        <option value="O">O</option>
+                        <option value="A+">A+</option>
+                        <option value="A">A</option>
+                        <option value="B+">B+</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Programming in Python</td>
+                <td>3</td>
+                <td>
+                    <select class="grade-select">
+                        <option value="O">O</option>
+                        <option value="A+">A+</option>
+                        <option value="A">A</option>
+                        <option value="B+">B+</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Engineering Graphics</td>
+                <td>3</td>
+                <td>
+                    <select class="grade-select">
+                        <option value="O">O</option>
+                        <option value="A+">A+</option>
+                        <option value="A">A</option>
+                        <option value="B+">B+</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Technical English</td>
+                <td>3</td>
+                <td>
+                    <select class="grade-select">
+                        <option value="O">O</option>
+                        <option value="A+">A+</option>
+                        <option value="A">A</option>
+                        <option value="B+">B+</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Matrices and Calculus</td>
+                <td>4</td>
+                <td>
+                    <select class="grade-select">
+                        <option value="O">O</option>
+                        <option value="A+">A+</option>
+                        <option value="A">A</option>
+                        <option value="B+">B+</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Python Lab</td>
+                <td>1.5</td>
+                <td>
+                    <select class="grade-select">
+                        <option value="O">O</option>
+                        <option value="A+">A+</option>
+                        <option value="A">A</option>
+                        <option value="B+">B+</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Phy and Chem Lab</td>
+                <td>1.5</td>
+                <td>
+                    <select class="grade-select">
+                        <option value="O">O</option>
+                        <option value="A+">A+</option>
+                        <option value="A">A</option>
+                        <option value="B+">B+</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </form>
+    
+    <h2>Second Semester</h2>
+    <form id="second-semester-form">
+        <table>
+            <tr>
+                <th>Subject</th>
+                <th>Credits</th>
+                <th>Grade</th>
+            </tr>
+            <!-- Second Semester Subjects -->
+            <tr>
+                <td>BEEE</td>
+                <td>3</td>
+                <td>
+                    <select class="grade-select">
+                        <option value="O">O</option>
+                        <option value="A+">A+</option>
+                        <option value="A">A</option>
+                        <option value="B+">B+</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Tamil</td>
+                <td>1</td>
+                <td>
+                    <select class="grade-select">
+                        <option value="O">O</option>
+                        <option value="A+">A+</option>
+                        <option value="A">A</option>
+                        <option value="B+">B+</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Design thinking lab</td>
+                <td>1.5</td>
+                <td>
+                    <select class="grade-select">
+                        <option value="O">O</option>
+                        <option value="A+">A+</option>
+                        <option value="A">A</option>
+                        <option value="B+">B+</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Elective</td>
+                <td>3</td>
+                <td>
+                    <select class="grade-select">
+                        <option value="O">O</option>
+                        <option value="A+">A+</option>
+                        <option value="A">A</option>
+                        <option value="B+">B+</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Data Structures</td>
+                <td>4</td>
+                <td>
+                    <select class="grade-select">
+                        <option value="O">O</option>
+                        <option value="A+">A+</option>
+                        <option value="A">A</option>
+                        <option value="B+">B+</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Software Lab</td>
+                <td>1.5</td>
+                <td>
+                    <select class="grade-select">
+                        <option value="O">O</option>
+                        <option value="A+">A+</option>
+                        <option value="A">A</option>
+                        <option value="B+">B+</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Maths</td>
+                <td>4</td>
+                <td>
+                    <select class="grade-select">
+                        <option value="O">O</option>
+                        <option value="A+">A+</option>
+                        <option value="A">A</option>
+                        <option value="B+">B+</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Physics</td>
+                <td>3</td>
+                <td>
+                    <select class="grade-select">
+                        <option value="O">O</option>
+                        <option value="A+">A+</option>
+                        <option value="A">A</option>
+                        <option value="B+">B+</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <button type="button" id="calculate-btn">Calculate CGPA</button>
+    <p>First Semester CGPA: <span id="first-semester-cgpa"></span></p>
+    <p>Second Semester CGPA: <span id="second-semester-cgpa"></span></p>
+    <p>Your CGPA for the entire year is: <span id="entire-cgpa"></span></p>
+
+    <script>
+        // JavaScript code for CGPA calculation
+        document.getElementById("calculate-btn").addEventListener("click", function () {
+            const grades = {
+                "O": 10,
+                "A+": 9,
+                "A": 8,
+                "B+": 7,
+                "B": 6,
+                "C": 5,
+            };
+
+            let totalCreditsFirstSemester = 0;
+            let totalGradePointsFirstSemester = 0;
+            
+            let totalCreditsSecondSemester = 0;
+            let totalGradePointsSecondSemester = 0;
+
+            // Loop through each grade select box for first semester
+            const firstSemesterGradeSelects = document.querySelectorAll("#first-semester-form .grade-select");
+            firstSemesterGradeSelects.forEach((select, index) => {
+                const credits = parseFloat(select.parentElement.previousElementSibling.textContent);
+                const grade = select.value.toUpperCase();
+
+                if (grades[grade]) {
+                    totalCreditsFirstSemester += credits;
+                    totalGradePointsFirstSemester += grades[grade] * credits;
+                }
+            });
+
+            // Loop through each grade select box for second semester
+            const secondSemesterGradeSelects = document.querySelectorAll("#second-semester-form .grade-select");
+            secondSemesterGradeSelects.forEach((select, index) => {
+                const credits = parseFloat(select.parentElement.previousElementSibling.textContent);
+                const grade = select.value.toUpperCase();
+
+                if (grades[grade]) {
+                    totalCreditsSecondSemester += credits;
+                    totalGradePointsSecondSemester += grades[grade] * credits;
+                }
+            });
+
+            if (totalCreditsFirstSemester === 0 || totalCreditsSecondSemester === 0) {
+                alert("Please select valid grades for both semesters.");
+                return;
+            }
+
+            const firstSemesterCGPA = totalGradePointsFirstSemester / totalCreditsFirstSemester;
+            const secondSemesterCGPA = totalGradePointsSecondSemester / totalCreditsSecondSemester;
+            const entireCGPA = (totalGradePointsFirstSemester + totalGradePointsSecondSemester) / (totalCreditsFirstSemester + totalCreditsSecondSemester);
+
+            document.getElementById("first-semester-cgpa").textContent = firstSemesterCGPA.toFixed(2);
+            document.getElementById("second-semester-cgpa").textContent = secondSemesterCGPA.toFixed(2);
+            document.getElementById("entire-cgpa").textContent = entireCGPA.toFixed(2);
+        });
+    </script>
+</body>
+</html>
